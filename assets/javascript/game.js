@@ -25,6 +25,7 @@ document.onkeyup = function(event) {
 		wins++;
 		alert("You won! Play again!");
 		reset();
+
 	} else if (guessesLeft == 1) {
 		losses++;
 		alert("You lost! Try again!");
