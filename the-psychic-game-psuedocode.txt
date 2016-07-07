@@ -2,16 +2,47 @@ PSYCHIC GAME PSUEDOCODE
 
 Display some text on a screen that provides user with instructions
 
+User is given 9 guesses
+User can play unlimited amounts of rounds
+After each round guessesLeft and guessesSoFar must reset
+
 Computer will randomly select a letter from an array of options (the alphabet)
 Computer will select one letter and use it the duration of the 9 guess limit game
 
 When user guesses any letter that is their first guess and the game starts
 
 	When userGuess letter is selected, that letter is logged to a line "Letters Guessed"
-	When userGuess letter is selected, the number of guesses remaining goes down by one
+	When userGuess letter is selected, the Number of Guesses remaining goes down by one
 	
-	When userGuess is equal to the computerGuess,
+	When userGuess is equal to the computerGuess
 		A win will be recorded
 		The game will reset for guesses remaining and letters guessed
 		Wins and losses will continue tracking (not a browser refresh)
 
+	When guessesLeft equals zero, a loss is recorded
+
+------------------------------------------------------------------------
+
+
+
+// Capture Computer Guess
+// Establish How Many Guesses
+
+
+document.onkeyup = function(event) {
+
+   // Capture User Input
+   // If we still have guesses left...
+   if (guessesLeft > 0){
+
+       // We'll check if there's a match.
+       if (letter == letterToGuess){
+
+       }
+
+   // If we are out of guesses...
+   }else if(guessesLeft == 0){
+
+   }
+
+}

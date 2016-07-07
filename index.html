@@ -23,24 +23,25 @@ var losses = 0;
 var guessesLeft = 9;
 var guessesSoFar = [];
 
+var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+console.log(computerGuess);
+
 // When the user presses the key it records the keypress and then sets it to userguess
 document.onkeyup = function(event) {
 	var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 	console.log(userGuess);
 
-	// This sets the computer guess equal to the random.
-	var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
-	console.log(computerGuess);
-	// Making sure the user chooses r, p, or s
 
-		// It tests to determine if the computer or the user won the round and then increments
+		if (userGuess !== computerGuess) {
+			guessesLeft--;
+		}
 		if (userGuess == computerGuess) {
-			guessesLeft--;
 			wins++;
-		} else {
-			losses++;
-			guessesLeft--;
+			alert("You won! Play again!");
+			guessesSoFar.length=0;
+			guessesLeft=9;
 		}
 
 		for (i=0; i < 1; i++) {
@@ -48,8 +49,14 @@ document.onkeyup = function(event) {
 		}
 
 		if (guessesLeft == 0) {
-			alert("Game Over! Refresh page to play again!");
-			guessesLeft == 9;
+			alert("You lost! Try again!");
+			losses++;
+			guessesSoFar.length=0;
+		}
+
+		if (guessesLeft == 0) {
+			guessesSoFar.length = 0;
+			guessesLeft = 9;
 		}
 
 		console.log(wins);
@@ -72,8 +79,10 @@ document.onkeyup = function(event) {
 		document.querySelector('#game').innerHTML = html;
 
 	}
+
+	//function newround()
 		//} elif (guessesLeft > 9) { 
-		//	alert("You suck!");
+		//	alert("Lost!");
 		//}
 	//if ((userGuess = computerGuess) && (guessesLeft < 9)) {
 	//		wins++;
