@@ -36,7 +36,7 @@ document.onkeyup = function(event) {
 	}
 
 		// Taking the tallies and displaying to HTML
-		var html = "<h1>Let's play a game.</h1>" + "<p>Try to guess what letter I am thinking of..." + "<p>Go ahead, guess a letter to start playing.</p>" +
+		var html = "<h1>Let's play a game, human.</h1>" + "<p>Try to guess what letter I am thinking of..." + "<p>Go ahead, guess a letter to start playing.</p>" +
 			"<p>Wins: " +
 			wins +
 			"</p>" +
