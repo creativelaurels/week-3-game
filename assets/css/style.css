@@ -1,4 +1,25 @@
-#top {
-	align-content: center;
+.main {
+	display: block;
+	margin: auto;
+	width: 40%;
+	padding-top: 30px;
+}
 
+body {
+	background-color: black;
+}
+
+.game {
+	color: red;
+}
+
+h1 {
+	color: red;
+	text-align: center;
+	padding: 20px;
+}
+
+p {
+	color: gray;
+	text-align: center;
 }
